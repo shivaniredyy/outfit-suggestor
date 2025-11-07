@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate Weather Outfit App</title>
+<link rel="stylesheet" href="style.css">
+<!-- TensorFlow.js & PoseNet -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.9.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@2.2.1"></script>
+</head>
+<body>
+<div class="app">
+  <div class="container">
+    <h1>Ultimate Weather Outfit Planner 🌤️👗</h1>
+
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Enter city">
+      <button id="checkBtn">Check Weather</button>
+      <button id="locBtn">Use My Location 📍</button>
+    </div>
+
+    <div id="result"></div>
+
+    <h2>Event/Calendar-Based Outfit</h2>
+    <select id="eventSelect">
+      <option value="casual">Casual</option>
+      <option value="office">Office</option>
+      <option value="party">Party</option>
+      <option value="workout">Workout</option>
+    </select>
+
+    <h2>Live Virtual Try-On 👗</h2>
+    <div class="virtual-try">
+      <video id="webcam" autoplay playsinline></video>
+      <canvas id="photoCanvas"></canvas>
+      <button id="startCamBtn">Start Camera</button>
+      <button id="snapshotBtn">Take Snapshot 📸</button>
+    </div>
+
+    <h2>Favorites ❤️</h2>
+    <ul id="favoritesList"></ul>
+
+    <h2>5-Day Forecast 📅</h2>
+    <div id="forecast" class="forecast-cards"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>           
